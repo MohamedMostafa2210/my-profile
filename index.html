@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mohamed Mostafa - Profile</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+        padding-top: 50px;
+      }
+
+      .card {
+        background: #ffffff20;
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 15px;
+        width: 320px;
+        margin: auto;
+      }
+
+      #qrcode {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <h2>Mohamed Mostafa</h2>
+      <p>Backend Developer</p>
+      <p>Email: mohamed@email.com</p>
+      <p>Phone: +20 000 000 0000</p>
+
+      <div id="qrcode"></div>
+    </div>
+
+    <script>
+      // 🔥 This automatically gets your live website URL
+      var currentPageURL = window.location.href;
+
+      new QRCode(document.getElementById("qrcode"), {
+        text: currentPageURL,
+        width: 200,
+        height: 200,
+      });
+    </script>
+  </body>
+</html>
